@@ -7,8 +7,9 @@ function SurveyMatchOrPit() {
   return (
     <div className="surveyMatchOrPit">
         <BackButton />
-        <BigButton className="mopButton" to="/surveyMatch">Match Scout</BigButton><br />
+        <BigButton className="mopButton" to="/surveyMatch">Match Scout</BigButton>
         <BigButton className="mopButton" to="/surveyPit">Pit Scout</BigButton>
+        <BigButton className="mopButton" to="/exportData">Export Data</BigButton>
     </div>
   );
 }

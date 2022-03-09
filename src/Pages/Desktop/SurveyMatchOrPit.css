@@ -1,7 +1,13 @@
 .surveyMatchOrPit {
-    text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+  gap: 20vh;
 }
 
-.mopButton {
-    margin-top: 20vh;
+.surveyMatchOrPit button {
+  margin-top: 0 !important;
 }
