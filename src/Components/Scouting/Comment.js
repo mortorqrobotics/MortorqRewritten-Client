@@ -14,6 +14,6 @@ function Comment({title, i, onInput, rows=3}) {
             </Form.Group>
         </div>
     );
-}
+}   
 
 export default Comment;
