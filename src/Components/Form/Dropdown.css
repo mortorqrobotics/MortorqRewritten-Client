@@ -1,0 +1,49 @@
+.dropdown {
+    width: 55%;
+    background-color: #C4C4C4;
+    padding-bottom: 100px;
+}
+
+.dropHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #DDDDDD;
+}
+
+.dropHeader p {
+    margin-bottom: 0;
+    margin-left: 15px;
+}
+
+.addOption {
+    font-size: 1.2rem!important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 29px;
+}
+
+.dropOption {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.dropOption p {
+    margin-left: 20px;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.dropOption h1 {
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    align-self: right;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    order: 2;
+}

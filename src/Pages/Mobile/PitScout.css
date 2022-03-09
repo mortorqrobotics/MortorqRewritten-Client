@@ -1,0 +1,12 @@
+.PitScout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    gap: 20px;
+}
+
+.PitScout div {
+    margin-bottom: 0;
+}

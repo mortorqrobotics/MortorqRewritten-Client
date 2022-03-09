@@ -1,0 +1,13 @@
+.surveyPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    width: 500px;
+}
+
+.surveyPreview > * {
+    margin-top: 10px;
+}

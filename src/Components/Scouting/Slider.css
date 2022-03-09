@@ -1,0 +1,17 @@
+.scoutSlide {
+    display: flex;
+    justify-content: center;
+}
+
+.scoutSlide img {
+    width: 75%;
+}
+
+.scoutSlide p {
+    position: absolute;
+    font-size: 100%;
+}
+
+.slider-val {
+    margin: 25px;
+}

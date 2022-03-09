@@ -1,0 +1,17 @@
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider img {
+    width: 75%;
+}
+
+.slider p {
+    position: absolute;
+    font-size: 1.2rem;
+}
+
+.slider-val {
+    margin: 25px;
+}

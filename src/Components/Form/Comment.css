@@ -1,0 +1,13 @@
+.comment label {
+    margin-top: -4px;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.commentGroup {
+    width: 75%;
+}

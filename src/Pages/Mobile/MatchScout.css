@@ -1,0 +1,16 @@
+.MatchScout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 15px;
+}
+
+.MatchScout > div {
+    margin-top: 10px;
+}
+
+.subButton {
+    margin-top: 60px;
+}
+

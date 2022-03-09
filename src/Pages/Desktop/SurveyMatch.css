@@ -1,0 +1,22 @@
+.surveyMatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#surveyHeader {
+    margin-top: 25px;
+}
+
+.surveyOptions {
+    display: flex;
+    align-items: center;
+}
+
+.surveyOptions button {
+    margin-left: 15px;
+}
+
+.surveyPreview {
+    background-color: #EEEEEE;
+}

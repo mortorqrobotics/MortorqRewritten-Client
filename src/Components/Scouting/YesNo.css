@@ -1,0 +1,17 @@
+.yesNo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yesNo img {
+    width: 75%;
+    user-select: none;
+}
+
+.yesNo p {
+    position: absolute;
+    margin-top: 12px;
+    transform: translate(-20%);
+    font-size: 1.1rem;
+}
