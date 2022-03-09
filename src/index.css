@@ -1,5 +1,9 @@
 .title {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 3.5em;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3.5em;
+}
+
+* {
+  touch-action: manipulation;
 }
