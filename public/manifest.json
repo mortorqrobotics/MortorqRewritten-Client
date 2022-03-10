@@ -1,6 +1,6 @@
 {
-  "short_name": "Fruit Basket",
-  "name": "Fruit Basket",
+  "short_name": "MorScout",
+  "name": "MorScout",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "##ff9100",
+  "theme_color": "#ff9100",
   "background_color": "#ffffff"
 }
