@@ -7,7 +7,10 @@ function Timer({title, onInput, i}) {
     let [stopped, setStopped] = useState(true)
 
     let toggleTimer = () => {
-        if(stopped) return setStopped(false)
+        if(stopped) {
+            setTime(0);
+            return setStopped(false)
+        }
         setStopped(true);
         onInput(i, time);
     }
