@@ -7,9 +7,9 @@ let style = {
     'height': '50px'
 }
 
-function WideButton({children, className="", onClick, variant="success"}) {
+function WideButton({children, className="", onClick, variant="success", disabled=false}) {
   return (
-    <Button className={className} style={style} variant={variant} onClick={onClick}>{children}</Button>
+    <Button className={className} style={style} variant={variant} onClick={onClick} disabled={disabled}>{children}</Button>
   );
 }
 

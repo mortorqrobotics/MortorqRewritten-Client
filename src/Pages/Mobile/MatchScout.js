@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'Components/Scouting/Slider';
 import Timer from 'Components/Scouting/Timer';
 import YesNo from 'Components/Scouting/YesNo';
@@ -10,21 +10,30 @@ import BackButton from 'Components/General/BackButton';
 
 function MatchScout(props) {
     let [template, updateTemplate] = useTemplate("template")
+    let [submitted, setSubmitted] = useState(false);
+
 
     let submitForm = async () => {
-        await fetch(`${process.env.REACT_APP_SERVER_IP}/match/submitForm`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({"user": props.location.data[2], "team": props.location.data[0], "match": props.location.data[1], "response": template.filter(item => item.type !== "section")})
-        })
+        setSubmitted(true);
+        try {
+            await fetch(`${process.env.REACT_APP_SERVER_IP}/match/submitForm`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({"user": props.location.data[2], "team": props.location.data[0], "match": props.location.data[1], "response": template.filter(item => item.type !== "section")})
+            })
+        } catch(e) {
+            alert(`Failed!`);
+        }
+        
         props.history.push('/')
     }
 
     return (
         <div className="MatchScout">
             <BackButton />
+            {submitted ? <h1>Loading...</h1> : <></>}
             {template.map((question, i) => {
                 switch(question.type) {
                     case "section":
@@ -41,7 +50,7 @@ function MatchScout(props) {
                         return null;
                 }
             })}
-            <WideButton className="subButton" onClick={submitForm}>Submit!</WideButton>
+            <WideButton className="subButton" onClick={submitForm} disabled={submitted}>Submit!</WideButton>
         </div>
     )
 }

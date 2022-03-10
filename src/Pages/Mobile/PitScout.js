@@ -3,16 +3,18 @@ import Dropdown from "Components/Scouting/Dropdown";
 import Numpad from "Components/Scouting/Numpad";
 import Comment from "Components/Scouting/Comment";
 import useTemplate from "Hooks/useTemplate";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./PitScout.css";
 import WideButton from "Components/General/WideButton";
 import FileUpload from "Components/Scouting/FileUpload";
 
 function PitScout(props) {
   let [template, setTemplate] = useTemplate("pitTemplate");
+  let [submitted, setSubmitted] = useState(false);
   const imageRef = useRef(null);
 
   let submitForm = async () => {
+    setSubmitted(true);
     try {
       let response = await fetch(
         `${process.env.REACT_APP_SERVER_IP}/pit/submitForm`,
@@ -49,6 +51,7 @@ function PitScout(props) {
     <div className="PitScout">
       <BackButton />
       <h1>Pit Scout</h1>
+      {submitted ? <h1>Loading...</h1> : <></>}
       {template.map((question, i) => {
         switch (question.type) {
           case "dropdown":
@@ -113,7 +116,11 @@ function PitScout(props) {
         }
       })}
 
-      <WideButton className="subButton" onClick={submitForm}>
+      <WideButton
+        className="subButton"
+        onClick={submitForm}
+        disabled={submitted}
+      >
         Submit!
       </WideButton>
     </div>
